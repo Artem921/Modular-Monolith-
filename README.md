@@ -52,7 +52,7 @@
     "BodyCarBd": "Host=localhost;Port=5432;Database=BodyCarBd;Username=postgres;Password=123;"
   },
 ```
-### <sup> 2. Модуль Cart </sup>
+### <sup> 2. Модуль Carts </sup>
 + <sup> Добавление продуктов в корзину. </sup>
 + <sup> Удаление продукта из корзины. </sup>
 + <sup> На стороне администратора просмотр корзин. </sup>
