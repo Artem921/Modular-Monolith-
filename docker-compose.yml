@@ -1,0 +1,48 @@
+version: '3.8'
+
+networks:
+  deploy-guid-dev:
+    driver: bridge  
+services:
+
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    container_name: api_container
+    build:
+      context: .
+      dockerfile: src/Api/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    networks:
+      - deploy-guid-dev
+    depends_on:
+      - postgres_data
+      - mongodb_data
+
+  postgres_data:
+    image: postgres:latest
+    restart: always
+    container_name: postgres_container
+    environment: 
+      - POSTGRES_DB=BodyCarBd
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data 
+    ports:
+      - 5432:5432
+    networks:
+      - deploy-guid-dev
+ 
+ 
+  mongodb_data:
+    image: mongo:4.4.18
+    container_name: mongodb_container
+    ports:
+      - '27017:27017'
+    volumes:
+      - .docker/mongodb-data:/data/db
+    networks:
+      - deploy-guid-dev
+  
