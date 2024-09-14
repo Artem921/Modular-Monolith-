@@ -29,7 +29,14 @@
 + <sup> Добавление продуктов в корзину. </sup>
 + <sup> Удаление продукта из корзины. </sup>
 + <sup> На стороне администратора просмотр корзин. </sup>
-
+'''
+ "CartDbSettings": {
+    "ProductsCollesctionName": "Cart",
+    "CoursesCollectionNmae": "Courses",
+    "ConnectionStrings": "mongodb://127.0.0.1:27017",
+    "DatabaseName": "CartDb"
+  },
+'''
 ### <sup> 2. Модуль Orders </sup>
 + <sup> Оформление заказа, путём ввода данных пользователем. </sup>
 + <sup> Продукты в заказ передаются из корзины. </sup>
