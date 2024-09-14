@@ -18,6 +18,27 @@
 
 ## <sup> Коммуникация </sup>
 ### <sup> Коммуникация между модулями, происходит за счёт контрактов. </sup>
+### <sup> Пример. Здесь в модуле Notification,класс SendEmailOrderHandler  обращается к классу OrdersContract(реализующий IOrdersContract), который в свою очередь обращается к слою Application, модуля Orders. Application уже обращается к слою Infrastructure, что бы вернуть Id заказ, для класса  SendEmailOrderHandler. </sup>
+```с#
+  internal class SendEmailOrderHandler : INotificationHandler<SendEmailOrderNotification>
+    {
+        private readonly IEmailService emailService;
+        private readonly IOrdersContract ordersContract;
+        public SendEmailOrderHandler(IEmailService emailService, IOrdersContract ordersContract)
+        {
+            this.emailService = emailService;
+            this.ordersContract = ordersContract;
+        }
+
+        public async Task Handle(SendEmailOrderNotification notification, CancellationToken cancellationToken)
+        {
+            var id = await ordersContract.GetIdByOrderAsync(notification.Id);
+            await emailService.SendEmailAsync(notification.Email,"Вашь заказ", $"Вашь заказ под номером {id} готов. Можите приехать по адрессу Городской округ Щёлково, база «Байкал» ");
+
+            await Task.CompletedTask;
+        }
+    }
+```
 
 ## <sup> Функциональность проекта </sup>
 ### <sup> 1. Модуль Identity </sup>
