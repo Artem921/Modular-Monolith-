@@ -13,12 +13,12 @@
 ### <sup> Все модули имеют трёхслойную архитектуру. </sup>
 + <sup> .Infrastructure - Здесь вся работа с данными.</sup>
 + <sup> .Application - Здесь Бизнес логика. </sup>
-+ <sup> .Controller Уровень представления </sup>
++ <sup> .Controller - Уровень представления </sup>
 
 
 ## <sup> Коммуникация </sup>
 ### <sup> Коммуникация между модулями, происходит за счёт контрактов. </sup>
-#### <sup> Кпримеру  здесь в модуле Notification, класс SendEmailOrderHandler  обращается к классу OrdersContract (реализующий IOrdersContract) модуля Orders, который в свою очередь обращается к слою Application, модуля Orders. Application уже обращается к слою Infrastructure, что бы вернуть Id заказ, для класса  SendEmailOrderHandler. </sup>
+#### <sup> К примеру  здесь в модуле Notification, класс SendEmailOrderHandler  обращается к классу OrdersContract (реализующий IOrdersContract) модуля Orders, который в свою очередь обращается к слою Application, модуля Orders. Application уже обращается к слою Infrastructure, что бы вернуть Id заказ, для класса  SendEmailOrderHandler. </sup>
 ```
   internal class SendEmailOrderHandler : INotificationHandler<SendEmailOrderNotification>
     {
