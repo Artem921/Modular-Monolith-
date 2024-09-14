@@ -39,8 +39,8 @@
         }
     }
 ```
-### <sup> Модуль Orders, обращается к базе данных через ORM Dapper. </sup>
-### <sup> Модуль Identity, обращается к базе данных через ORM Entity Framework. </sup>
+###№ <sup> Модуль Orders, обращается к базе данных через ORM Dapper. </sup>
+###№ <sup> Модуль Identity, обращается к базе данных через ORM Entity Framework. </sup>
 
 ## <sup> Функциональность проекта </sup>
 ### <sup> 1. Модуль Identity </sup>
