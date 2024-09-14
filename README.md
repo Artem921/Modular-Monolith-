@@ -11,13 +11,8 @@
 
 ## <sup> Архитектура </sup>
 ### <sup> Все модули имеют трёхслойную архитектуру. </sup>
-+ <sup> .Infrastructure </sup>
-#### <sup> Здесь вся работа с данными. </sup>
-
-+ <sup> .Application </sup>
-
-### <sup> Здесь Бизнес логика. </sup>
-
++ <sup> .Infrastructure - Здесь вся работа с данными.</sup>
++ <sup> .Application - Здесь Бизнес логика. </sup>
 + <sup> .Controller </sup>
 
 
