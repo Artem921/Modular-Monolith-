@@ -4,7 +4,7 @@ namespace Identity.Domain.Entities
 {
     internal class User : IdentityUser
     {
-        public const string Login = "Dmitri_Larin";
-        public const string Password = "AdminBodyCar24!";
+        public const string Login = "Admin";
+        public const string Password = "Aa123!";
     }
 }
