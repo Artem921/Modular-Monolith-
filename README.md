@@ -1,6 +1,6 @@
 ## <sup> Проект релизован в качестве демонстрации работы модульного монолита, контейнеров docker. </sup>
 #### Стек проекта:
-+ Asp Net Core Web Api
++ <sup> Asp Net Core Web Api </sup>
 + Docker
 + Entity Framework
 + MongoDB
@@ -9,4 +9,4 @@
 + Mapster
 + MediatR
 
-<sup> Функциональность проекта </sup>
+## <sup> Функциональность проекта </sup>
