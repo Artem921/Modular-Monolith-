@@ -10,4 +10,6 @@
 + <sup> MediatR </sup>
 
 ## <sup> Функциональность проекта </sup>
-#### <sup> 1. Модуль Identity </sup>
+### <sup> 1. Модуль Identity </sup>
++ <sup> Авторизация администратора. </sup>
+<sup> Login: Admin; Password: Aa123! </sup>
