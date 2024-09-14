@@ -13,7 +13,7 @@
 ### <sup> Все модули имеют трёхслойную архитектуру. </sup>
 + <sup> .Infrastructure - Здесь вся работа с данными.</sup>
 + <sup> .Application - Здесь Бизнес логика. </sup>
-+ <sup> .Controller </sup>
++ <sup> .Controller Уровень представления </sup>
 
 
 ## <sup> Коммуникация </sup>
@@ -39,6 +39,8 @@
         }
     }
 ```
+### <sup> Модуль Orders, обращается к базе данных через ORM Dapper. </sup>
+### <sup> Модуль Identity, обращается к базе данных через ORM Entity Framework. </sup>
 
 ## <sup> Функциональность проекта </sup>
 ### <sup> 1. Модуль Identity </sup>
