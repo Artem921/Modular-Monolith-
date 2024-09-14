@@ -18,8 +18,8 @@
 
 ## <sup> Коммуникация </sup>
 ### <sup> Коммуникация между модулями, происходит за счёт контрактов. </sup>
-##### <sup> Кпримеру  здесь в модуле Notification,класс SendEmailOrderHandler  обращается к классу OrdersContract(реализующий IOrdersContract), который в свою очередь обращается к слою Application, модуля Orders. Application уже обращается к слою Infrastructure, что бы вернуть Id заказ, для класса  SendEmailOrderHandler. </sup>
-```с#
+#### <sup> Кпримеру  здесь в модуле Notification, класс SendEmailOrderHandler  обращается к классу OrdersContract (реализующий IOrdersContract) модуля Orders, который в свою очередь обращается к слою Application, модуля Orders. Application уже обращается к слою Infrastructure, что бы вернуть Id заказ, для класса  SendEmailOrderHandler. </sup>
+```
   internal class SendEmailOrderHandler : INotificationHandler<SendEmailOrderNotification>
     {
         private readonly IEmailService emailService;
