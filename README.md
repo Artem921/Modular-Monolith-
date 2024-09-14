@@ -22,19 +22,23 @@
 ## <sup> Функциональность проекта </sup>
 ### <sup> 1. Модуль Identity </sup>
 + <sup> Авторизация администратора. </sup>
-
 <sup> Login: Admin; Password: Aa123! </sup>
-
+### <sup> Строка подключения </sup>
+```
+  "ConnectionStrings": {
+    "BodyCarBd": "Host=localhost;Port=5432;Database=BodyCarBd;Username=postgres;Password=123;"
+  },
+```
 ### <sup> 2. Модуль Cart </sup>
 + <sup> Добавление продуктов в корзину. </sup>
 + <sup> Удаление продукта из корзины. </sup>
 + <sup> На стороне администратора просмотр корзин. </sup>
-
+### <sup> Строка подключения </sup>
 ```
  "CartDbSettings": {
     "ProductsCollesctionName": "Cart",
     "CoursesCollectionNmae": "Courses",
-    "ConnectionStrings": "mongodb://127.0.0.1:27017",
+    "ConnectionStrings": "mongodb_container:27017",
     "DatabaseName": "CartDb"
   },
 ```
@@ -47,7 +51,15 @@
 ### <sup> 3. Модуль Products </sup>
 + <sup> Создание продукта. </sup>
 + <sup> На стороне администратора просмотр и удаление продуктов. </sup>
-
+### <sup> Строка подключения </sup>
+```
+  "ProductDbSettings": {
+    "ProductsCollesctionName": "Products",
+    "CoursesCollectionNmae": "Courses",
+    "ConnectionStrings": "mongodb_container:27017",
+    "DatabaseName": "ProductDb"
+  },
+```
 ### <sup> 4. Модуль Notification </sup>
 + <sup> Отправка письменного оповещения, на почту клиента. </sup>
 
