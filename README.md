@@ -83,4 +83,13 @@
 ```
 ### <sup> 4. Модуль Notification </sup>
 + <sup> Отправка письменного оповещения, на почту клиента. </sup>
-
+### <sup> У вас должна быть почта yandex. </sup>
+```
+"EmailOptions": {
+    "Server": "smtp.yandex.ru",
+    "Port": 25,
+    "Email": "your_email",
+    "Password": "pebgzleujzoptgks",
+    "FromName": "My shop autoinformator"
+  }
+```
