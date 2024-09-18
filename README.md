@@ -44,8 +44,7 @@
 
 ## <sup> Функциональность проекта </sup>
 ### <sup> 1. Модуль Identity </sup>
-+ <sup> Авторизация администратора. </sup>
-<sup> Login: Admin; Password: Aa123! </sup>
++ <sup> Авторизация и регистрация. </sup>
 ### <sup> Строка подключения </sup>
 ```
   "ConnectionStrings": {
